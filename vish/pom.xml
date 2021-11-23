@@ -1,1 +1,19 @@
+<project>
+        <modelVersion>4.0.0</modelVersion>
 
+        <groupId>com.example.maven-project</groupId>
+        <artifactId>maven-project</artifactId>
+        <packaging>jar</packaging>
+        <version>0.0.1-SNAPSHOT</version>
+        <name>Maven Project</name>
+       
+        <dependencies>
+                 <dependency>
+                          <groupId>junit</groupid>
+                          <artifactId>junit</artifactId>
+                          <version>4.11</version>
+                          <scope>test</scope>
+                 <dependency>
+        <dependencies>                 
+                
+</project>
