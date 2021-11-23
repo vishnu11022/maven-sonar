@@ -4,7 +4,7 @@ name: GitHub Actions Maven Build Example
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master/vis ]
 jobs:
 
   build-on-ubuntu:
@@ -25,7 +25,7 @@ jobs:
     
       - name: Step 3 - Have GitHub Actions Build Maven Project
         run: |
-          mvn -B package --file pom.xml
+          mvn -B package --file ../../pom.xml
           mkdir staging && cp target/*.jar staging
 
       - name: Step 4 - Set up a cache for Maven
