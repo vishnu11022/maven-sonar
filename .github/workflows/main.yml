@@ -31,7 +31,7 @@ jobs:
       - name: Print the input tag to STDOUT
         run: echo  The tags are ${{ github.event.inputs.tags }}       - name: Step 3 - Have GitHub Actions Build Maven Project
         run: |
-          mvn -B package --file */pom.xml
+          mvn -B package --file vish/pom.xml
           mkdir staging && cp target/*.jar staging
 
       - name: Step 4 - Set up a cache for Maven
