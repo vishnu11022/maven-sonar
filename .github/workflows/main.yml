@@ -21,4 +21,4 @@ jobs:
           java-version: 1.8
 
       - name: step 3 - Have GitHub Actions Build Maven Project
-        run: mvn -B package --file vish/pom.xml
+        run: mvn -B package --file vis/pom.xml
