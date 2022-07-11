@@ -19,7 +19,7 @@ jobs:
   visbuild:
     runs-on: [ ubuntu-latest ]
     steps:
-      - name: step1 - checkout from mster branch
+      - name: step1 - checkout from master branch
       - uses: actions/checkout@v2
       
       - name: step2- setup JDK 1.8
@@ -28,7 +28,7 @@ jobs:
           java-version: 1.8
       
       - name: step- 3 Build maven project
-        run: mvn -B package --file vis/pom.xml
+        run: mvn -B install --file vis/pom.xml
  
   vishbuild: 
     runs-on: [ ubuntu-latest ]
