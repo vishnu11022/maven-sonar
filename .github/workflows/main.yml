@@ -8,7 +8,7 @@ on:
         required: true 
       services:
         description: 'services to be build'
-        type: boolean
+        type: choice
         required: true
         options:
           - vis
