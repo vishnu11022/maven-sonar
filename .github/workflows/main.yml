@@ -28,7 +28,7 @@ jobs:
           java-version: 1.8
       
       - name: step- 3 Build maven project
-        run: mvn -B install --file vis/pom.xml
+        run: mvn -B package --file vis/pom.xml
  
   vishbuild: 
     runs-on: [ ubuntu-latest ]
@@ -45,6 +45,19 @@ jobs:
         run: mvn -B package --file vish/pom.xml
   
 ## Deploy to environments
+  dev:
+    runs-on: [ ubuntu-latest ]
+    needs: visbuild
+    if: ${{ github.event.inputs.vis == 'true' }}
+    environment: dev
+    steps: 
+    - name: download artifacts
+    - uses: actions/download-artifacts@v2
+      with: 
+        name: 
+      
+    
+      
  
 
   
